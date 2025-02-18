@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 body {
@@ -12,6 +13,11 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 20px;
+}
+
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #121212;
 }
 
 header {
@@ -31,6 +37,22 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+#theme-toggle {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+}
+
+body.light-mode #theme-toggle {
+    background-color: #ddd;
+    color: #333;
 }
 
 #about img {
@@ -54,6 +76,11 @@ nav a:hover {
     width: 250px;
 }
 
+body.light-mode .project {
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .project img {
     width: 100%;
     border-radius: 5px;
@@ -67,6 +94,7 @@ nav a:hover {
 #contact a:hover {
     text-decoration: underline;
 }
+
 footer {
     margin-top: 20px;
     font-size: 14px;
