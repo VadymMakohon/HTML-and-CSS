@@ -10,8 +10,8 @@
 
 <body>
     <header>
-        <h1>Peter Jonsen</h1>
-        <p>Web Developer | Designer | Freelancer</p>
+        <h1 class="fade-in">Peter Jonsen</h1>
+        <p class="fade-in">Web Developer | Designer | Freelancer</p>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
@@ -55,9 +55,12 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: peterjonsen@example.com</p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/peterjonsen</a></p>
-        <p>GitHub: <a href="#">github.com/peterjonsen</a></p>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
     <footer>
