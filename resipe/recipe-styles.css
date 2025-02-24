@@ -22,20 +22,23 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Recipe Title */
 h1 {
   font-size: 28px;
   margin-bottom: 10px;
 }
 
-/* Recipe Image */
 .recipe-img {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   height: auto;
   border-radius: 10px;
   margin-top: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .ingredients, .instructions {
@@ -84,14 +87,5 @@ footer {
 
   header {
       padding: 15px;
-  }
-
-  .recipe-img {
-      max-width: 100%;
-      max-width: 300px;
-      height: auto;
-    border-radius: 10px;
-    margin-top: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   }
 }
