@@ -4,44 +4,90 @@
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
-  
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(to right, #ff8c00, #ff2d55);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Recipe Title */
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Recipe Image */
+.recipe-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ingredients, .instructions {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 22px;
+  color: #ff8c00;
+  border-bottom: 2px solid #ff8c00;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+ul li, ol li {
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Hover Effects */
+.ingredients:hover, .instructions:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
   body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-    background-color: #f4f4f4;
+      padding: 10px;
   }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
+
+  header {
+      padding: 15px;
   }
-  
-  .profile-img {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
+
+  .recipe-img {
+      max-width: 100%;
   }
-  
-  h1 {
-    margin-top: 10px;
-  }
-  
-  .bio, .projects {
-    margin-bottom: 20px;
-  }
-  
-  a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  footer {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
+}
