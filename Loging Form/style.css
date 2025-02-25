@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -12,21 +12,22 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
 }
 
 .container {
     width: 350px;
-    background: white;
+    background: #1e293b;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     text-align: center;
 }
 
 .form-box h2 {
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .input-group {
@@ -37,10 +38,12 @@ body {
 .input-group input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #475569;
     border-radius: 5px;
     font-size: 16px;
     outline: none;
+    background: #334155;
+    color: white;
     transition: 0.3s;
 }
 
@@ -49,21 +52,21 @@ body {
     top: 50%;
     left: 12px;
     transform: translateY(-50%);
-    color: #777;
+    color: #94a3b8;
     font-size: 14px;
     transition: 0.3s;
 }
 
 .input-group input:focus,
 .input-group input:valid {
-    border-color: #ff758c;
+    border-color: #3b82f6;
 }
 
 .input-group input:focus + label,
 .input-group input:valid + label {
     top: 5px;
     font-size: 12px;
-    color: #ff758c;
+    color: #3b82f6;
 }
 
 .extra-links {
@@ -73,7 +76,7 @@ body {
 
 .extra-links a {
     text-decoration: none;
-    color: #ff758c;
+    color: #3b82f6;
     font-size: 14px;
 }
 
@@ -84,17 +87,18 @@ body {
 .btn {
     width: 100%;
     padding: 12px;
-    background: #ff758c;
+    background: #2563eb;
     border: none;
     color: white;
     font-size: 16px;
+    font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #ff5c7a;
+    background: #1d4ed8;
 }
 
 .toggle-text {
@@ -103,9 +107,9 @@ body {
 }
 
 .toggle-text a {
-    color: #ff758c;
+    color: #3b82f6;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .toggle-text a:hover {
