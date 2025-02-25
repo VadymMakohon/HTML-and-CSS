@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     const formTitle = document.getElementById("form-title");
-    const authForm = document.getElementById("auth-form");
     const toggleLink = document.getElementById("toggle-form");
     const btn = document.querySelector(".btn");
     let isLogin = true;
