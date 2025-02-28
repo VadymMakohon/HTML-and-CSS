@@ -24,3 +24,24 @@ body {
     width: 400px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #444;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: #00c853;
+    transition: width 0.3s;
+}
+
