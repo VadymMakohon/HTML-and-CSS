@@ -6,3 +6,21 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+    color: white;
+}
+
+.quiz-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
