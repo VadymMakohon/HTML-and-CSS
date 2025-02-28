@@ -5,10 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun Quiz App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <div class="quiz-container">
+        <h1>Quiz Time! 🎉</h1>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div id="question-container">
+            <h2 id="question">Loading...</h2>
+            <div id="answer-buttons" class="btn-grid"></div>
+        </div>
+        <button id="next-btn" class="next-btn">Next Question</button>
+        <p id="score-text">Score: 0</p>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
