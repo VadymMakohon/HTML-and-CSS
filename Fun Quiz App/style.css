@@ -66,3 +66,11 @@ h1 {
     background: #4b5563;
 }
 
+.correct {
+    background: #00c853;
+}
+
+.wrong {
+    background: #d32f2f;
+}
+
