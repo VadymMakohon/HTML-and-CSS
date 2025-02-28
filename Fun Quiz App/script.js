@@ -18,7 +18,13 @@ const questions = [
         question: "What is 5 + 7?",
         answers: ["10", "12", "14", "15"],
         correct: "12"
+    },
+    {
+        question: "Which ocean is the largest?",
+        answers: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+        correct: "Pacific Ocean"
     }
+
 ];
 
 const questionContainer = document.getElementById("question-container");
