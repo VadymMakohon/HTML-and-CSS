@@ -74,3 +74,23 @@ h1 {
     background: #d32f2f;
 }
 
+.next-btn {
+    display: none;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #facc15;
+    color: black;
+}
+
+.next-btn:hover {
+    background: #fbbf24;
+}
+
+#score-text {
+    margin-top: 10px;
+    font-weight: bold;
+}
