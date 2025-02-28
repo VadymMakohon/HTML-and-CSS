@@ -45,3 +45,24 @@ h1 {
     transition: width 0.3s;
 }
 
+.btn-grid {
+    display: grid;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #374151;
+    color: white;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #4b5563;
+}
+
