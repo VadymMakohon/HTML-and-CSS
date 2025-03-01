@@ -23,8 +23,42 @@ const questions = [
         question: "Which ocean is the largest?",
         answers: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
         correct: "Pacific Ocean"
+    },
+    {
+        question: "Who painted the Mona Lisa?",
+        answers: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+        correct: "Leonardo da Vinci"
+    },
+    {
+        question: "What is the capital of Japan?",
+        answers: ["Seoul", "Beijing", "Bangkok", "Tokyo"],
+        correct: "Tokyo"
+    },
+    {
+        question: "What gas do plants absorb from the atmosphere?",
+        answers: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+        correct: "Carbon Dioxide"
+    },
+    {
+        question: "How many continents are there on Earth?",
+        answers: ["5", "6", "7", "8"],
+        correct: "7"
+    },
+    {
+        question: "What is the hardest natural substance on Earth?",
+        answers: ["Gold", "Iron", "Diamond", "Platinum"],
+        correct: "Diamond"
+    },
+    {
+        question: "Who developed the theory of relativity?",
+        answers: ["Isaac Newton", "Albert Einstein", "Nikola Tesla", "Stephen Hawking"],
+        correct: "Albert Einstein"
+    },
+    {
+        question: "Which country is famous for inventing pizza?",
+        answers: ["Spain", "Greece", "Italy", "France"],
+        correct: "Italy"
     }
-
 ];
 
 const questionContainer = document.getElementById("question-container");
