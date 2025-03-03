@@ -5,10 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <div class="container">
+        <h1>Countdown Timer</h1>
+        <input type="number" id="minutesInput" placeholder="Enter minutes">
+        <button id="setTime">Set Time</button>
+        <div class="timer">
+            <span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+        <div class="buttons">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
