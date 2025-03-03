@@ -32,17 +32,17 @@ input {
 }
 
 #start {
-    background-color: #4CAF50;
+    background-color: #98af4c;
     color: white;
 }
 
 #pause {
-    background-color: #f39c12;
+    background-color: #b312f3;
     color: white;
 }
 
 #reset {
-    background-color: #e74c3c;
+    background-color: #7b3ce7;
     color: white;
 }
 
