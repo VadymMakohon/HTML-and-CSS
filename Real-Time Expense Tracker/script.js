@@ -13,3 +13,16 @@ document.getElementById("addExpense").addEventListener("click", function () {
     const li = document.createElement("li");
     li.innerHTML = `${name} - $${amount.toFixed(2)} 
         <button class="remove">❌</button>`;
+
+    expenseList.appendChild(li);
+
+    totalAmount.textContent = (parseFloat(totalAmount.textContent) + amount).toFixed(2);
+
+    li.querySelector(".remove").addEventListener("click", function () {
+        li.remove();
+        totalAmount.textContent = (parseFloat(totalAmount.textContent) - amount).toFixed(2);
+    });
+
+    document.getElementById("expenseName").value = "";
+    document.getElementById("expenseAmount").value = "";
+});
