@@ -57,3 +57,16 @@ li {
     justify-content: space-between;
     border-radius: 5px;
 }
+
+.remove {
+    background: #e74c3c;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.remove:hover {
+    background: #c0392b;
+}
