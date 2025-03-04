@@ -4,11 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-Time Expense Tracker</title>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
+    <div class="container">
+        <h1>💸 Expense Tracker</h1>
+        <div class="input-section">
+            <input type="text" id="expenseName" placeholder="Expense Name">
+            <input type="number" id="expenseAmount" placeholder="Amount">
+            <button id="addExpense">Add Expense</button>
+        </div>
+        <h2>Total: $<span id="totalAmount">0</span></h2>
+        <ul id="expenseList"></ul>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
