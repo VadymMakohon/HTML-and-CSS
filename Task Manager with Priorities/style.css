@@ -15,3 +15,31 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+input, select {
+    flex: 1;
+    background: #2c2c2c;
+    color: white;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
