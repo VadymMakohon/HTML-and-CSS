@@ -4,11 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager with Priorities</title>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
+    <div class="container">
+        <h1>📝 Task Manager</h1>
+        <div class="input-section">
+            <input type="text" id="taskName" placeholder="Task Name">
+            <select id="taskPriority">
+                <option value="High">🔥 High</option>
+                <option value="Medium">⚡ Medium</option>
+                <option value="Low">✅ Low</option>
+            </select>
+            <button id="addTask">Add Task</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
