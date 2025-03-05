@@ -72,3 +72,16 @@ li {
     background: #2ecc71;
     color: white;
 }
+
+.remove {
+    background: #c0392b;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.remove:hover {
+    background: #a93226;
+}
