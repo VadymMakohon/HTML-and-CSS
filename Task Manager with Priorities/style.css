@@ -43,3 +43,32 @@ button {
 button:hover {
     background: #45a049;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.high {
+    background: #e74c3c;
+    color: white;
+}
+
+.medium {
+    background: #f39c12;
+    color: white;
+}
+
+.low {
+    background: #2ecc71;
+    color: white;
+}
