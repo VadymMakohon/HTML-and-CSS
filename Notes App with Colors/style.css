@@ -27,3 +27,19 @@ input, button {
     border: none;
     border-radius: 5px;
 }
+
+#noteText {
+    flex: 1;
+    background: #2c2c2c;
+    color: white;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
