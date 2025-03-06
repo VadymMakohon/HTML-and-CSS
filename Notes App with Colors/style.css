@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: #8613b0;
+    background: #7a0ea3;
+
     color: white;
     text-align: center;
     margin: 0;
@@ -9,7 +10,7 @@ body {
 .container {
     max-width: 500px;
     margin: 50px auto;
-    background: #1b079d;
+    background: #3012c4;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -30,12 +31,12 @@ input, button {
 
 #noteText {
     flex: 1;
-    background: #928d8d;
+    background: #b3b3b3;
     color: white;
 }
 
 button {
-    background: #6128dc;
+    background: #7845e6;
     color: white;
     cursor: pointer;
 }
@@ -55,7 +56,7 @@ button:hover {
     padding: 10px;
     border-radius: 5px;
     position: relative;
-    color: black;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -63,8 +64,8 @@ button:hover {
     position: absolute;
     top: 5px;
     right: 5px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+    background: rgba(163, 154, 154, 0.7);
+    color: #ff6666;
     border: none;
     padding: 5px;
     cursor: pointer;
