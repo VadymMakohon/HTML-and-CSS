@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: #121212;
+    background: #8613b0;
     color: white;
     text-align: center;
     margin: 0;
@@ -9,7 +9,7 @@ body {
 .container {
     max-width: 500px;
     margin: 50px auto;
-    background: #1e1e1e;
+    background: #1b079d;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -30,18 +30,18 @@ input, button {
 
 #noteText {
     flex: 1;
-    background: #2c2c2c;
+    background: #928d8d;
     color: white;
 }
 
 button {
-    background: #4CAF50;
+    background: #6128dc;
     color: white;
     cursor: pointer;
 }
 
 button:hover {
-    background: #45a049;
+    background: #260483;
 }
 
 #notesGrid {
