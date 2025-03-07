@@ -13,3 +13,10 @@ function addTask() {
     `; taskList.appendChild(listItem);
     taskInput.value = "";
 }
+function toggleComplete(task) {
+    task.classList.toggle("completed");
+}
+
+function removeTask(button) {
+    button.parentElement.remove();
+}
