@@ -6,4 +6,19 @@ function addBookmark() {
 
     if (bookmarkName === "" || bookmarkURL === "") return;
 
+    let bookmarkList = document.getElementById("bookmarkList");
+
+    let listItem = document.createElement("li");
+    listItem.innerHTML = `
+        <a href="${bookmarkURL}" target="_blank">${bookmarkName}</a>
+        <button class="delete" onclick="removeBookmark(this)">Delete</button>
+    `;
+
+    bookmarkList.appendChild(listItem);
+    nameInput.value = "";
+    urlInput.value = "";
+}
+
+function removeBookmark(button) {
+    button.parentElement.remove();
 }
