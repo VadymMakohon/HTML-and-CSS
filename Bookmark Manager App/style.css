@@ -44,3 +44,37 @@ button {
 button:hover {
     background: #3B0E79;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #3E1B6A;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    color: #FFDD44;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.delete {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
