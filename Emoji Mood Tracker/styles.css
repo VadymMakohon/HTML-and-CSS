@@ -65,18 +65,19 @@ textarea {
 }
 
 .dark-mode textarea {
-    background: #777;
-    color: #fff;       
-    border: 1px solid #bbb; 
+    background: #444;  
+    color: #fff;      
+    border: 1px solid #888;
 }
 
+/* List Styling */
 ul {
     list-style: none;
     padding: 0;
 }
 
 li {
-    background: #fff3cd;
+    background: #fff3cd; 
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
@@ -84,4 +85,10 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.dark-mode li {
+    background: #555; 
+    color: #eee;       
+    border: 1px solid #777;
 }
