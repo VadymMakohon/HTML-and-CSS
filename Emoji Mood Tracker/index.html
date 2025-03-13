@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emoji Mood Tracker 😊</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
     <div class="container">
+        <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
         <h1>How Are You Feeling Today? 😊</h1>
+
         <div class="emoji-picker">
             <button onclick="saveMood('😀')">😀</button>
             <button onclick="saveMood('😢')">😢</button>
@@ -18,9 +21,17 @@
             <button onclick="saveMood('🤔')">🤔</button>
             <button onclick="saveMood('😎')">😎</button>
         </div>
+
+        <textarea id="moodNote" placeholder="Write a note about your mood..."></textarea>
+        <button onclick="saveMoodWithNote()">Save Mood</button>
+
         <h2>Mood History 📜</h2>
         <ul id="moodHistory"></ul>
+
+        <h2>Mood Trends 📊</h2>
+        <canvas id="moodChart"></canvas>
     </div>
+
     <script src="script.js"></script>
 </body>
 
