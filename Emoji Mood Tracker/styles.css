@@ -27,4 +27,17 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
+button {
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    background: #ff7eb3;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
 
