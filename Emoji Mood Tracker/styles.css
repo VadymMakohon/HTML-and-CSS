@@ -16,3 +16,15 @@ body {
     color: black;
 }
 
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+.emoji-picker {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
