@@ -3,12 +3,12 @@ document.getElementById("darkModeToggle").addEventListener("click", function () 
 });
 
 function saveMood(emoji) {
-    let moodNote = document.getElementById("moodNote").value;
+    let moodNote = document.getElementById("moodNote").value.trim();
     let moodHistory = JSON.parse(localStorage.getItem("moodHistory")) || [];
 
     let moodEntry = {
         emoji: emoji,
-        note: moodNote,
+        note: moodNote || "No note provided",
         timestamp: new Date().toLocaleString()
     };
 
@@ -51,12 +51,19 @@ function updateChart() {
     moodHistory.forEach(entry => {
         moodCounts[entry.emoji] = (moodCounts[entry.emoji] || 0) + 1;
     });
+
     console.log("Mood Counts:", moodCounts);
 
     let ctx = document.getElementById("moodChart").getContext("2d");
+
     if (window.moodChart) {
         window.moodChart.destroy();
     }
+
+    if (Object.keys(moodCounts).length === 0) {
+        return;
+    }
+
     window.moodChart = new Chart(ctx, {
         type: "bar",
         data: {
@@ -66,6 +73,10 @@ function updateChart() {
                 data: Object.values(moodCounts),
                 backgroundColor: ["#ff7eb3", "#ff758c", "#ff5a8a", "#f0475b", "#e71c23"],
             }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
         }
     });
 }
