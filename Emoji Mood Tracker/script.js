@@ -16,7 +16,6 @@ function saveMood(emoji) {
     localStorage.setItem("moodHistory", JSON.stringify(moodHistory));
 
     displayMoods();
-    updateChart();
 }
 
 function displayMoods() {
@@ -41,50 +40,6 @@ function removeMood(index) {
     localStorage.setItem("moodHistory", JSON.stringify(moodHistory));
 
     displayMoods();
-    updateChart();
-}
-
-function updateChart() {
-    let moodHistory = JSON.parse(localStorage.getItem("moodHistory")) || [];
-    let moodCounts = {};
-
-    moodHistory.forEach(entry => {
-        moodCounts[entry.emoji] = (moodCounts[entry.emoji] || 0) + 1;
-    });
-
-    console.log("Mood Counts:", moodCounts);
-
-    let ctx = document.getElementById("moodChart").getContext("2d");
-
-    if (window.moodChart) {
-        window.moodChart.destroy();
-    }
-
-    if (Object.keys(moodCounts).length === 0) {
-        console.warn("No moods to display in chart.");
-        return;
-    }
-
-    window.moodChart = new Chart(ctx, {
-        type: "bar",
-        data: {
-            labels: Object.keys(moodCounts),
-            datasets: [{
-                label: "Mood Count",
-                data: Object.values(moodCounts),
-                backgroundColor: ["#ff7eb3", "#ff758c", "#ff5a8a", "#f0475b", "#e71c23"],
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
 }
 
 document.getElementById("clearEmoji").addEventListener("click", function () {
@@ -93,5 +48,4 @@ document.getElementById("clearEmoji").addEventListener("click", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
     displayMoods();
-    setTimeout(updateChart, 500);
 });
