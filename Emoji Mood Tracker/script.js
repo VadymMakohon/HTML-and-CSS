@@ -32,6 +32,15 @@ function displayMoods() {
     });
 }
 
+function removeMood(index) {
+    let moodHistory = JSON.parse(localStorage.getItem("moodHistory")) || [];
+    moodHistory.splice(index, 1);
+    localStorage.setItem("moodHistory", JSON.stringify(moodHistory));
+
+    displayMoods();
+    updateChart();
+}
+
 function updateChart() {
     let moodHistory = JSON.parse(localStorage.getItem("moodHistory")) || [];
     let moodCounts = {};
