@@ -25,9 +25,12 @@ function displayMoods() {
 
     let moodHistory = JSON.parse(localStorage.getItem("moodHistory")) || [];
 
-    moodHistory.forEach(entry => {
+    moodHistory.forEach((entry, index) => {
         let li = document.createElement("li");
-        li.innerHTML = `${entry.emoji} - ${entry.note} <small>(${entry.timestamp})</small>`;
+        li.innerHTML = `
+            ${entry.emoji} - ${entry.note} <small>(${entry.timestamp})</small>
+            <button class="removeMood" onclick="removeMood(${index})">❌</button>
+        `;
         moodList.appendChild(li);
     });
 }
@@ -65,6 +68,10 @@ function updateChart() {
         }
     });
 }
+
+document.getElementById("clearEmoji").addEventListener("click", function () {
+    document.getElementById("moodNote").value = "";
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     displayMoods();
