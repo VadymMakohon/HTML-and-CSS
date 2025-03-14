@@ -70,7 +70,6 @@ textarea {
     border: 1px solid #888;
 }
 
-/* List Styling */
 ul {
     list-style: none;
     padding: 0;
@@ -91,4 +90,9 @@ li {
     background: #555; 
     color: #eee;       
     border: 1px solid #777;
+}
+
+#moodChart {
+    width: 100%;
+    max-height: 300px;
 }
