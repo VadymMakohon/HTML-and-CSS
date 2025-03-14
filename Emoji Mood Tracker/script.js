@@ -61,6 +61,7 @@ function updateChart() {
     }
 
     if (Object.keys(moodCounts).length === 0) {
+        console.warn("No moods to display in chart.");
         return;
     }
 
@@ -76,7 +77,12 @@ function updateChart() {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
         }
     });
 }
@@ -87,5 +93,5 @@ document.getElementById("clearEmoji").addEventListener("click", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
     displayMoods();
-    updateChart();
+    setTimeout(updateChart, 500);
 });
