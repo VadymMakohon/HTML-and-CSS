@@ -51,6 +51,7 @@ function updateChart() {
     moodHistory.forEach(entry => {
         moodCounts[entry.emoji] = (moodCounts[entry.emoji] || 0) + 1;
     });
+    console.log("Mood Counts:", moodCounts);
 
     let ctx = document.getElementById("moodChart").getContext("2d");
     if (window.moodChart) {
