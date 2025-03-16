@@ -17,7 +17,14 @@ const planetData = [
     { name: "Mars", color: 0xff0000, distance: 15, size: 0.6, fact: "Mars has the tallest volcano." }
 ];
 
-
+planetData.forEach((data, index) => {
+    const geometry = new THREE.SphereGeometry(data.size, 32, 32);
+    const material = new THREE.MeshStandardMaterial({ color: data.color });
+    const planet = new THREE.Mesh(geometry, material);
+    planet.position.x = data.distance;
+    scene.add(planet);
+    planets.push({ mesh: planet, data, angle: Math.random() * Math.PI * 2 });
+});
 
 const light = new THREE.PointLight(0xffffff, 2, 50);
 scene.add(light);
