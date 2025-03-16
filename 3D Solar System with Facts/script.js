@@ -17,11 +17,22 @@ const planetData = [
     { name: "Mars", color: 0xff0000, distance: 15, size: 0.6, fact: "Mars has the tallest volcano." }
 ];
 
+
+
 const light = new THREE.PointLight(0xffffff, 2, 50);
 scene.add(light);
 
 camera.position.z = 20;
 
+function animate() {
+    requestAnimationFrame(animate);
+    planets.forEach(planet => {
+        planet.angle += 0.01;
+        planet.mesh.position.x = Math.cos(planet.angle) * planet.data.distance;
+        planet.mesh.position.z = Math.sin(planet.angle) * planet.data.distance;
+    });
+    renderer.render(scene, camera);
+}
 
 animate();
 
