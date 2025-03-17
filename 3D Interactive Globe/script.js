@@ -1,6 +1,6 @@
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
@@ -13,21 +13,21 @@ scene.add(earth);
 
 const light = new THREE.PointLight(0xffffff, 2, 50);
 scene.add(light);
-
 camera.position.z = 8;
 
-// Load country data
-let countries;
+let countries = null;
 fetch('https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json')
     .then(response => response.json())
-    .then(data => { countries = data.features; });
+    .then(data => {
+        countries = data.features;
+        console.log("GeoJSON Loaded");
+    });
 
 function animate() {
     requestAnimationFrame(animate);
     earth.rotation.y += 0.002;
     renderer.render(scene, camera);
 }
-
 animate();
 
 function getCountryFromLatLon(lat, lon) {
@@ -54,6 +54,8 @@ window.addEventListener("click", (event) => {
         const lat = Math.asin(point.y / 3) * (180 / Math.PI);
         const lon = Math.atan2(point.z, point.x) * (180 / Math.PI);
         const country = getCountryFromLatLon(lat, lon);
+
+        console.log(`Clicked lat: ${lat}, lon: ${lon}, Country: ${country}`);
 
         const infoBox = document.getElementById("infoBox");
         infoBox.innerHTML = `<strong>${country}</strong><br>Fun fact: This is an amazing place!`;
