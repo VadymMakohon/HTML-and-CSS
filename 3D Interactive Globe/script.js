@@ -16,6 +16,12 @@ scene.add(light);
 
 camera.position.z = 8;
 
+// Load country data
+let countries;
+fetch('https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json')
+    .then(response => response.json())
+    .then(data => { countries = data.features; });
+
 function animate() {
     requestAnimationFrame(animate);
     earth.rotation.y += 0.002;
@@ -23,6 +29,16 @@ function animate() {
 }
 
 animate();
+
+function getCountryFromLatLon(lat, lon) {
+    if (!countries) return "Unknown";
+    for (let country of countries) {
+        if (d3.geoContains(country, [lon, lat])) {
+            return country.properties.name;
+        }
+    }
+    return "Unknown";
+}
 
 window.addEventListener("click", (event) => {
     const mouse = new THREE.Vector2(
@@ -34,8 +50,13 @@ window.addEventListener("click", (event) => {
     const intersects = raycaster.intersectObject(earth);
 
     if (intersects.length > 0) {
+        const point = intersects[0].point;
+        const lat = Math.asin(point.y / 3) * (180 / Math.PI);
+        const lon = Math.atan2(point.z, point.x) * (180 / Math.PI);
+        const country = getCountryFromLatLon(lat, lon);
+
         const infoBox = document.getElementById("infoBox");
-        infoBox.innerHTML = "🌍 You clicked on Earth!";
+        infoBox.innerHTML = `<strong>${country}</strong><br>Fun fact: This is an amazing place!`;
         infoBox.style.display = "block";
     }
 });
